@@ -23,9 +23,16 @@ def read_json(path: str):
         for ch in allowed_ch[allowed_ch.index(ch_from):allowed_ch.index(ch_till) + 1]:
             if first not in result:
                 result[first] = {}
-            result[first][ch] = title
+            if title not in result[first]:
+                result[first][title] = []
+
+            result[first][title].append(ch)
 
     return result
+
+def chars_to_pattern(chars: list[str]):
+    for ch in chars:
+        yield "b'{}'".format(ch)
 
 def main():
     chdir(SCRIPT_DIR)
@@ -40,9 +47,9 @@ def main():
         country_out.write("    match wmi.as_bytes()[0] {\n")
         for first, countries in countries.items():
             country_out.write("        b'{}' => match wmi.as_bytes()[1] {{\n".format(first))
-            for second, title in countries.items():
-                print("{}{}:{}".format(first, second, title))
-                country_out.write("            b'{}' => \"{}\",\n".format(second, title))
+            for title, seconds in countries.items():
+                pattern = " | ".join(chars_to_pattern(seconds))
+                country_out.write("            {} => \"{}\",\n".format(pattern, title))
             country_out.write("            _ => UNKNOWN,\n")
             country_out.write('        },\n')
 
