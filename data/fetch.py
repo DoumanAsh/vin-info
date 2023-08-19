@@ -29,5 +29,13 @@ def main():
     file = fetch_json("motorcycle")
     print(">{}: Written".format(file))
 
+    print("Fetch truck...")
+    file = fetch_json("truck")
+    print(">{}: Written".format(file))
+
+    print("Fetch mpv...")
+    file = fetch_json("mpv")
+    print(">{}: Written".format(file))
+
 if __name__ == "__main__":
     main()

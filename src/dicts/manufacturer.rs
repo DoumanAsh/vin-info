@@ -8,12 +8,16 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'T' => match wmi.as_bytes()[2] {
                 b'U' => "Tri-Star Industries Limited",
                 b'1' => "Toyota Motor Manufacturing Canada",
+                b'2' => "Toyota Motor Manufacturing Canada",
+                b'3' => "Toyota Motor Manufacturing Canada",
                 _ => UNKNOWN,
             },
             b'P' => match wmi.as_bytes()[2] {
                 b'C' => "Volvo Group Canada, Inc",
                 b'5' => "Fca Canada Inc.",
                 b'3' => "Fca Canada Inc.",
+                b'4' => "Fca Canada Inc.",
+                b'7' => "Fca Canada Inc.",
                 _ => UNKNOWN,
             },
             b'N' => match wmi.as_bytes()[2] {
@@ -23,12 +27,18 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'M' => match wmi.as_bytes()[2] {
                 b'G' => "Motor Coach Industries Limited",
                 b'E' => "Ford Motor Company Of Canada, Ltd.",
+                b'R' => "Ford Motor Company Of Canada, Ltd.",
+                b'1' => "Mack Canada Inc.",
                 _ => UNKNOWN,
             },
             b'F' => match wmi.as_bytes()[2] {
                 b'Y' => "New Flyer Industries Canada Ulc",
                 b'B' => "Ford Motor Company Of Canada, Ltd.",
                 b'A' => "Ford Motor Company Of Canada, Ltd.",
+                b'M' => "Ford Motor Company Of Canada, Ltd.",
+                b'U' => "Freightliner  Corporation",
+                b'T' => "Ford Motor Company Of Canada, Ltd.",
+                b'W' => "Sterling Trucks (Daimler Division)",
                 _ => UNKNOWN,
             },
             b'B' => match wmi.as_bytes()[2] {
@@ -36,14 +46,24 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'5' => "Fca Canada Inc.",
                 b'3' => "Fca Canada Inc.",
                 b'X' => "Bombardier Recreational Products Inc ",
+                b'4' => "Fca Canada Inc.",
+                b'8' => "Fca Canada Inc.",
+                b'A' => "Daimlerchrysler Commercial Buses North America (Canada)",
+                b'C' => "American Motors Corp.",
+                b'7' => "Fca Canada Inc.",
                 _ => UNKNOWN,
             },
             b'J' => match wmi.as_bytes()[2] {
                 b'5' => "Fca Canada Inc.",
+                b'4' => "Fca Canada Inc.",
                 _ => UNKNOWN,
             },
             b'D' => match wmi.as_bytes()[2] {
                 b'5' => "Fca Canada Inc.",
+                b'4' => "Fca Canada Inc.",
+                b'8' => "Fca Canada Inc.",
+                b'3' => "Fca Canada Inc.",
+                b'7' => "Fca Canada Inc.",
                 _ => UNKNOWN,
             },
             b'G' => match wmi.as_bytes()[2] {
@@ -57,6 +77,12 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'6' => "General Motors Llc",
                 b'2' => "General Motors Llc",
                 b'3' => "General Motors Llc",
+                b'N' => "General Motors Llc",
+                b'K' => "General Motors Llc",
+                b'8' => "General Motors Llc",
+                b'5' => "General Motors Llc",
+                b'T' => "General Motors Llc",
+                b'C' => "General Motors Llc",
                 _ => UNKNOWN,
             },
             b'C' => match wmi.as_bytes()[2] {
@@ -65,15 +91,32 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'M' => "American Motors (Canada) Inc",
                 b'1' => "General Motors Llc",
                 b'2' => "General Motors Llc",
+                b'4' => "Fca Canada Inc.",
+                b'A' => "Fca Canada Inc.",
+                b'8' => "Fca Canada Inc.",
+                b'C' => "Cami Automotive Inc",
+                b'T' => "General Motors Llc",
+                b'K' => "General Motors Llc",
+                b'N' => "General Motors Llc",
+                b'G' => "General Motors Llc",
+                b'6' => "Fca Canada Inc.",
+                b'0' => "Cami Automotive Inc",
                 _ => UNKNOWN,
             },
             b'H' => match wmi.as_bytes()[2] {
                 b'G' => "Honda Of Canada Mfg., Inc.",
                 b'H' => "Honda Of Canada Mfg., Inc.",
+                b'K' => "Honda Of Canada Mfg., Inc.",
+                b'N' => "Honda Of Canada Mfg., Inc.",
+                b'P' => "Navistar Canada, Inc.",
+                b'S' => "Navistar Canada, Inc.",
+                b'J' => "Honda Of Canada Mfg., Inc.",
+                b'U' => "Honda Of Canada Mfg., Inc.",
                 _ => UNKNOWN,
             },
             b'L' => match wmi.as_bytes()[2] {
                 b'N' => "Ford Motor Company Of Canada, Ltd.",
+                b'M' => "Ford Motor Company Of Canada, Ltd.",
                 _ => UNKNOWN,
             },
             b'E' => match wmi.as_bytes()[2] {
@@ -83,14 +126,30 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'A' => match wmi.as_bytes()[2] {
                 b'3' => "Fca Canada Inc.",
+                b'8' => "Fca Canada Inc.",
+                b'4' => "Fca Canada Inc.",
+                b'Z' => "Hino Motors Canada, Ltd",
+                b'7' => "Fca Canada Inc.",
                 _ => UNKNOWN,
             },
             b'X' => match wmi.as_bytes()[2] {
                 b'M' => "Chrysler Group Llc(Usa),Chrysler Canada, Chrysler De Mexico",
+                b'P' => "Peterbilt Motors Company",
+                b'K' => "Kenworth Truck Company",
                 _ => UNKNOWN,
             },
             b'S' => match wmi.as_bytes()[2] {
                 b'2' => "Suzuki Motor Of America, Inc",
+                _ => UNKNOWN,
+            },
+            b'V' => match wmi.as_bytes()[2] {
+                b'4' => "Fca Canada Inc.",
+                b'8' => "Chrysler Group Llc(Usa),Chrysler Canada, Chrysler De Mexico",
+                _ => UNKNOWN,
+            },
+            b'W' => match wmi.as_bytes()[2] {
+                b'K' => "Western Star Trucks Inc",
+                b'E' => "Western Star Trucks Inc",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -110,15 +169,31 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'W' => "Mercedes-Benz, Ag",
                 b'D' => "Mercedes-Benz Cars",
                 b'B' => "Mercedes-Benz Cars",
+                b'R' => "Daimler Chrysler Ag",
+                b'4' => "Mercedes-Benz, Ag",
+                b'C' => "Mercedes-Benz Cars",
+                b'5' => "Daimler Chrysler Ag",
+                b'8' => "Mercedes-Benz, Ag",
+                b'Y' => "Daimler Chrysler Ag",
+                b'6' => "Daimler Chrysler Ag",
+                b'3' => "Mercedes-Benz, Ag",
+                b'0' => "Mercedes-Benz, Ag",
+                b'2' => "Daimler Chrysler Ag",
                 _ => UNKNOWN,
             },
             b'1' => match wmi.as_bytes()[2] {
                 b'Z' => "Mercedes-Benz, Ag",
                 b'K' => "Mercedes-Benz Cars",
+                b'N' => "Mercedes-Benz Cars",
+                b'W' => "Mercedes-Benz, Ag",
+                b'H' => "Mercedes-Benz, Ag",
+                b'Y' => "Mercedes-Benz, Ag",
                 _ => UNKNOWN,
             },
             b'2' => match wmi.as_bytes()[2] {
                 b'Z' => "Mercedes-Benz, Ag",
+                b'W' => "Mercedes-Benz, Ag",
+                b'Y' => "Mercedes-Benz, Ag",
                 _ => UNKNOWN,
             },
             b'K' => match wmi.as_bytes()[2] {
@@ -136,10 +211,12 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'A' => match wmi.as_bytes()[2] {
                 b'U' => "Audi Ag",
                 b'P' => "Bmw Of North America, Llc",
+                b'1' => "Audi Ag",
                 _ => UNKNOWN,
             },
             b'U' => match wmi.as_bytes()[2] {
                 b'A' => "Audi Sport Gmbh",
+                b'1' => "Audi Sport Gmbh",
                 _ => UNKNOWN,
             },
             b'B' => match wmi.as_bytes()[2] {
@@ -151,11 +228,14 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'3' => "Bmw Ag Motorcycles",
                 b'4' => "Bmw Ag Motorcycles",
                 b'7' => "Black Tea Motorbikes Gmbh",
+                b'X' => "Bmw Ag",
+                b'5' => "Bmw Ag",
                 _ => UNKNOWN,
             },
             b'M' => match wmi.as_bytes()[2] {
                 b'W' => "Bmw Ag",
                 b'E' => "Mercedes-Benz Cars",
+                b'Z' => "Bmw Ag",
                 _ => UNKNOWN,
             },
             b'Z' => match wmi.as_bytes()[2] {
@@ -164,6 +244,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'P' => match wmi.as_bytes()[2] {
                 b'0' => "Dr. Ing. H.C.F. Porsche Ag",
+                b'1' => "Dr. Ing. H.C.F. Porsche Ag",
                 _ => UNKNOWN,
             },
             b'F' => match wmi.as_bytes()[2] {
@@ -173,6 +254,9 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'V' => match wmi.as_bytes()[2] {
                 b'W' => "Volkswagen Ag",
+                b'G' => "Volkswagen Ag",
+                b'2' => "Volkswagen Group Of America, Inc.",
+                b'1' => "Volkswagen Group Of America, Inc.",
                 _ => UNKNOWN,
             },
             b'T' => match wmi.as_bytes()[2] {
@@ -183,6 +267,10 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'G' => "Ggc-Global Generation Cult, Gmbh",
                 _ => UNKNOWN,
             },
+            b'Y' => match wmi.as_bytes()[2] {
+                b'B' => "Mercedes-Benz, Ag",
+                _ => UNKNOWN,
+            },
             _ => UNKNOWN,
         },
         b'J' => match wmi.as_bytes()[1] {
@@ -190,11 +278,16 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'C' => "Hino Motors, Ltd.",
                 b'2' => "Honda Motor Co., Ltd",
                 b'3' => "Honda Motor Co., Ltd",
+                b'A' => "Hino Motors, Ltd.",
+                b'7' => "Hino Motors, Ltd.",
                 _ => UNKNOWN,
             },
             b'8' => match wmi.as_bytes()[2] {
                 b'7' => "Isuzu Motors Limited, Japan",
                 b'1' => "Isuzu Motors Limited, Japan",
+                b'Z' => "Isuzu Motors Limited, Japan",
+                b'C' => "General Motors Llc",
+                b'T' => "General Motors Llc",
                 _ => UNKNOWN,
             },
             b'T' => match wmi.as_bytes()[2] {
@@ -205,27 +298,44 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'8' => "Toyota Motor Corporation",
                 b'5' => "Toyota Motor Corporation",
                 b'K' => "Toyota Motor North America, Inc",
+                b'E' => "Toyota Motor North America, Inc",
+                b'L' => "Toyota Motor Corporation",
+                b'J' => "Toyota Motor Corporation",
+                b'M' => "Toyota Motor Corporation",
+                b'6' => "Toyota Motor Corporation",
+                b'3' => "Toyota Motor Corporation",
+                b'4' => "Toyota Motor Corporation",
                 _ => UNKNOWN,
             },
             b'F' => match wmi.as_bytes()[2] {
                 b'1' => "Subaru Corporation",
                 b'4' => "Fuji Heavy Industries U.S.A., Inc. (C/O Subaru Of America)",
                 b'E' => "Zhejiang Senling Motorcycle Co., Ltd.",
+                b'2' => "Subaru Corporation",
+                b'3' => "Fuji Heavy Industries U.S.A., Inc. (C/O Subaru Of America)",
                 _ => UNKNOWN,
             },
             b'G' => match wmi.as_bytes()[2] {
                 b'7' => "Suzuki Motor Of America, Inc",
                 b'1' => "General Motors Llc",
                 b'2' => "General Motors Llc",
+                b'C' => "General Motors Llc",
+                b'T' => "General Motors Llc",
                 _ => UNKNOWN,
             },
             b'N' => match wmi.as_bytes()[2] {
                 b'1' => "Nissan Motor Company, Ltd",
+                b'8' => "Nissan Motor Company, Ltd",
+                b'6' => "Nissan Motor Company, Ltd",
+                b'E' => "Ud Trucks Corporation",
                 _ => UNKNOWN,
             },
             b'P' => match wmi.as_bytes()[2] {
                 b'3' => "Mitsubishi Motors Corporation (Mmc)",
                 b'4' => "Mitsubishi Motors Corporation (Mmc)",
+                b'7' => "Mitsubishi Motors Corporation (Mmc)",
+                b'E' => "Ud Trucks Corporation",
+                b'B' => "Ud Trucks Corporation",
                 _ => UNKNOWN,
             },
             b'J' => match wmi.as_bytes()[2] {
@@ -239,23 +349,34 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'M' => match wmi.as_bytes()[2] {
                 b'1' => "Mazda Motor Corporation",
+                b'3' => "Mazda Motor Corporation",
+                b'2' => "Mazda Motor Corporation",
                 _ => UNKNOWN,
             },
             b'C' => match wmi.as_bytes()[2] {
                 b'1' => "Mazda Motor Corporation",
+                b'2' => "Mazda Motor Corporation",
                 _ => UNKNOWN,
             },
             b'A' => match wmi.as_bytes()[2] {
                 b'3' => "Mitsubishi Motors Corporation (Mmc)",
                 b'B' => "Isuzu Motors Limited, Japan",
+                b'4' => "Mitsubishi Motors Corporation (Mmc)",
+                b'C' => "Isuzu Motors Limited, Japan",
+                b'E' => "Isuzu Motors Limited, Japan",
+                b'7' => "Mitsubishi Motors Corporation (Mmc)",
+                b'A' => "Isuzu Motors Limited, Japan",
                 _ => UNKNOWN,
             },
             b'B' => match wmi.as_bytes()[2] {
                 b'3' => "Fca Us Llc",
+                b'4' => "Mitsubishi Motors Corporation (Mmc)",
+                b'7' => "Mitsubishi Motors Corporation (Mmc)",
                 _ => UNKNOWN,
             },
             b'D' => match wmi.as_bytes()[2] {
                 b'1' => "Daihatsu Motor Co., Ltd.",
+                b'2' => "Daihatsu Motor Co., Ltd.",
                 _ => UNKNOWN,
             },
             b'K' => match wmi.as_bytes()[2] {
@@ -270,11 +391,20 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'L' => "Suzuki Motor Of America, Inc",
                 b'1' => "Suzuki Motor Of America, Inc",
                 b'A' => "Suzuki Motor Of America, Inc",
+                b'4' => "Suzuki Motor Of America, Inc",
                 _ => UNKNOWN,
             },
             b'Y' => match wmi.as_bytes()[2] {
                 b'4' => "Yamaha Motor Corporation",
                 b'A' => "Yamaha Motor Co., Ltd.",
+                _ => UNKNOWN,
+            },
+            b'R' => match wmi.as_bytes()[2] {
+                b'2' => "Honda Motor Co., Ltd",
+                _ => UNKNOWN,
+            },
+            b'W' => match wmi.as_bytes()[2] {
+                b'7' => "Mitsubishi Motors Corporation (Mmc)",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -283,6 +413,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'F' => match wmi.as_bytes()[2] {
                 b'E' => "Alexander Dennis Limited",
                 b'Z' => "Tesla, Inc.",
+                b'N' => "Kenworth Truck Company",
                 _ => UNKNOWN,
             },
             b'C' => match wmi.as_bytes()[2] {
@@ -298,19 +429,24 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'J' => "Jaguar Land Rover Limited",
                 b'T' => "Triumph Motor Company",
                 b'Y' => "Norton Motorcycles Uk Ltd",
+                b'L' => "Jaguar Land Rover Limited",
+                b'D' => "Jaguar Land Rover Limited",
                 _ => UNKNOWN,
             },
             b'J' => match wmi.as_bytes()[2] {
                 b'Z' => "Autocar Limited",
                 b'K' => "Nissan Motor Manufacturing (Uk) Ltd",
+                b'A' => "Bentley Motors Limited",
                 _ => UNKNOWN,
             },
             b'H' => match wmi.as_bytes()[2] {
                 b'H' => "Honda Of The U.K. Mfg., Ltd.",
+                b'S' => "Honda Of The U.K. Mfg., Ltd.",
                 _ => UNKNOWN,
             },
             b'B' => match wmi.as_bytes()[2] {
                 b'M' => "Mclaren Automotive Limited",
+                b'S' => "Scammell Motors Plant",
                 _ => UNKNOWN,
             },
             b'M' => match wmi.as_bytes()[2] {
@@ -329,17 +465,36 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'E' => "Govecs Ag",
                 _ => UNKNOWN,
             },
+            b'D' => match wmi.as_bytes()[2] {
+                b'7' => "Aston Martin Lagonda Limited",
+                _ => UNKNOWN,
+            },
+            b'L' => match wmi.as_bytes()[2] {
+                b'A' => "Rolls Royce Motor Cars",
+                _ => UNKNOWN,
+            },
+            b'E' => match wmi.as_bytes()[2] {
+                b'G' => "Dennis Eagle, Ltd.",
+                _ => UNKNOWN,
+            },
             _ => UNKNOWN,
         },
         b'1' => match wmi.as_bytes()[1] {
             b'B' => match wmi.as_bytes()[2] {
                 b'A' => "Blue Bird Body Company",
                 b'5' => "Fca Us Llc",
+                b'B' => "Blue Bird Body Company",
+                b'8' => "Fca Us Llc",
+                b'4' => "Fca Us Llc",
+                b'7' => "Fca Us Llc",
+                b'C' => "Blue Bird Body Company",
                 _ => UNKNOWN,
             },
             b'V' => match wmi.as_bytes()[2] {
                 b'H' => "Daimlerchrysler Commercial Buses North America",
                 b'W' => "Volkswagen Group Of America, Inc.",
+                b'2' => "Volkswagen Group Of America, Inc.",
+                b'1' => "Volkswagen Group Of America, Inc.",
                 _ => UNKNOWN,
             },
             b'5' => match wmi.as_bytes()[2] {
@@ -358,25 +513,51 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'6' => "General Motors Llc",
                 b'0' => "General Motors Llc",
                 b'7' => "General Motors Llc",
+                b'Y' => "General Motors Llc",
+                b'N' => "General Motors Llc",
+                b'H' => "General Motors Llc",
+                b'K' => "General Motors Llc",
+                b'M' => "General Motors Llc",
+                b'5' => "General Motors Llc",
+                b'G' => "General Motors Llc",
+                b'W' => "Grumman Olson Industries Inc.",
+                b'C' => "General Motors Llc",
+                b'T' => "General Motors Llc",
                 _ => UNKNOWN,
             },
             b'C' => match wmi.as_bytes()[2] {
                 b'5' => "Fca Us Llc",
                 b'3' => "Fca Us Llc",
                 b'U' => "Cushman A Division Of Outboard Marine Corporation",
+                b'4' => "Fca Us Llc",
+                b'8' => "Fca Us Llc",
+                b'6' => "Fca Us Llc",
                 _ => UNKNOWN,
             },
             b'J' => match wmi.as_bytes()[2] {
                 b'5' => "Fca Us Llc",
+                b'4' => "Fca Us Llc",
+                b'8' => "Fca Us Llc",
+                b'C' => "Fca Us Llc",
+                b'3' => "Fca Us Llc",
+                b'7' => "Fca Us Llc",
+                b'T' => "Fca Us Llc",
+                b'U' => "Marmon Motor Co",
                 _ => UNKNOWN,
             },
             b'P' => match wmi.as_bytes()[2] {
                 b'5' => "Fca Us Llc",
                 b'3' => "Fca Us Llc",
+                b'4' => "Fca Us Llc",
+                b'7' => "Fca Us Llc",
                 _ => UNKNOWN,
             },
             b'D' => match wmi.as_bytes()[2] {
                 b'5' => "Fca Us Llc",
+                b'4' => "Fca Us Llc",
+                b'8' => "Fca Us Llc",
+                b'7' => "Fca Us Llc",
+                b'3' => "Fca Us Llc",
                 _ => UNKNOWN,
             },
             b'F' => match wmi.as_bytes()[2] {
@@ -384,6 +565,10 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'A' => "Ford Motor Company",
                 b'7' => "Ford Motor Company",
                 b'L' => "Ford Motor Company",
+                b'M' => "Ford Motor Company",
+                b'1' => "Ford Motor Company",
+                b'U' => "Daimler Trucks North America Llc",
+                b'T' => "Ford Motor Company",
                 _ => UNKNOWN,
             },
             b'E' => match wmi.as_bytes()[2] {
@@ -399,6 +584,8 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'8' => "Motor Coach Industries, Inc.",
                 b'R' => "Ford Motor Company",
                 b'E' => "Ford Motor Company",
+                b'B' => "Mercedes-Benz Truck Company Inc",
+                b'1' => "Mack Trucks Inc.",
                 _ => UNKNOWN,
             },
             b'8' => match wmi.as_bytes()[2] {
@@ -408,6 +595,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'N' => match wmi.as_bytes()[2] {
                 b'4' => "Nissan North America, Inc.",
                 b'X' => "New United Motor Manufacturing, Inc.",
+                b'6' => "Nissan North America, Inc.",
                 _ => UNKNOWN,
             },
             b'Y' => match wmi.as_bytes()[2] {
@@ -428,12 +616,16 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'X' => match wmi.as_bytes()[2] {
                 b'A' => "Excalibur Automobile Corporation",
+                b'P' => "Peterbilt Motors Company",
+                b'K' => "Kenworth Truck Company",
                 _ => UNKNOWN,
             },
             b'H' => match wmi.as_bytes()[2] {
                 b'G' => "American Honda Motor Co., Inc.",
                 b'F' => "American Honda Motor Co., Inc.",
                 b'D' => "Harley-Davidson Motor Company",
+                b'P' => "Navistar, Inc.",
+                b'S' => "Navistar, Inc.",
                 _ => UNKNOWN,
             },
             b'9' => match wmi.as_bytes()[2] {
@@ -446,6 +638,11 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'Z' => match wmi.as_bytes()[2] {
                 b'V' => "Auto Alliance International, Usa",
                 b'W' => "Auto Alliance International, Usa",
+                b'4' => "Fca Us Llc",
+                b'6' => "Fca Us Llc",
+                b'8' => "Fca Us Llc",
+                b'7' => "Fca Us Llc",
+                b'3' => "Fca Us Llc",
                 _ => UNKNOWN,
             },
             b'2' => match wmi.as_bytes()[2] {
@@ -458,6 +655,37 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'1' => match wmi.as_bytes()[2] {
                 b'Z' => "Badsey Bullet U.S.A., Inc.",
+                b'V' => "Kalmar Solutions Llc",
+                _ => UNKNOWN,
+            },
+            b'A' => match wmi.as_bytes()[2] {
+                b'4' => "Fca Us Llc",
+                b'8' => "Fca Us Llc",
+                b'C' => "American Motors Corp.",
+                b'M' => "American Motors Corp.",
+                b'3' => "Fca Us Llc",
+                b'7' => "Fca Us Llc",
+                b'F' => "American Lafrance, Llc",
+                _ => UNKNOWN,
+            },
+            b'3' => match wmi.as_bytes()[2] {
+                b'7' => "Am General Llc",
+                _ => UNKNOWN,
+            },
+            b'W' => match wmi.as_bytes()[2] {
+                b'V' => "Winnebago Industries, Inc.",
+                b'W' => "Winnebago Industries, Inc.",
+                b'T' => "Winnebago Industries, Inc.",
+                b'A' => "Volvo White Truck Corporation",
+                b'U' => "Volvo White Truck Corporation",
+                _ => UNKNOWN,
+            },
+            b'0' => match wmi.as_bytes()[2] {
+                b'T' => "Oshkosh Corporation",
+                _ => UNKNOWN,
+            },
+            b'R' => match wmi.as_bytes()[2] {
+                b'G' => "Trident Motors, Inc ",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -478,6 +706,8 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'F' => "Lion Electric Manufacturing Usa Inc.",
                 b'1' => "Boss Motor Inc.",
                 b'Y' => "Fly E-Bike Inc.",
+                b'Z' => "Mullen Automotive, Inc.",
+                b'G' => "Lion Electric Manufacturing Usa Inc.",
                 _ => UNKNOWN,
             },
             b'K' => match wmi.as_bytes()[2] {
@@ -487,29 +717,52 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'H' => match wmi.as_bytes()[2] {
                 b'T' => "Sf Motors, Inc.",
+                b'4' => "Hino Motors Manufacturing Usa, Inc",
                 _ => UNKNOWN,
             },
             b'N' => match wmi.as_bytes()[2] {
                 b'E' => "Ziggy Lsv Inc. (Formerly Ziggy Inc.)",
                 b'6' => "P And G Imports, Llc",
                 b'F' => "Land Llc",
+                b'A' => "Navistar Defense, Llc",
+                b'Y' => "Lordstown Ev Corporation",
                 _ => UNKNOWN,
             },
             b'F' => match wmi.as_bytes()[2] {
                 b'7' => "Arcimoto Inc.",
+                b'A' => "American Honda Motor Co., Inc.",
+                b'C' => "Rivian Automotive, Llc",
                 _ => UNKNOWN,
             },
             b'P' => match wmi.as_bytes()[2] {
                 b'3' => "Ev Transportation Services, Inc.",
                 b'7' => "Tham Corporation",
+                b'2' => "Bremach, Inc.",
+                b'D' => "Rivian Automotive, Llc",
                 _ => UNKNOWN,
             },
             b'M' => match wmi.as_bytes()[2] {
                 b'E' => "Onyx Motorbikes, Inc.",
+                b'U' => "Mazda Toyota Manufacturing, Usa, Inc.",
+                b'M' => "Mazda Toyota Manufacturing, Usa, Inc.",
                 _ => UNKNOWN,
             },
             b'U' => match wmi.as_bytes()[2] {
                 b'V' => "Rawrr Inc.",
+                b'K' => "Xos, Inc",
+                _ => UNKNOWN,
+            },
+            b'G' => match wmi.as_bytes()[2] {
+                b'0' => "Faraday&Future Inc.",
+                b'6' => "Us Specialty Vehicles Llc",
+                b'2' => "Tesla, Inc.",
+                b'B' => "Mahindra North American Technical Center Incorporated",
+                _ => UNKNOWN,
+            },
+            b'S' => match wmi.as_bytes()[2] {
+                b'V' => "Toyota Motor Manufacturing, Texas, Inc.",
+                b'A' => "Tesla, Inc.",
+                b'U' => "The Shyft Group Ev Solutions, Llc",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -527,6 +780,10 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'S' => match wmi.as_bytes()[2] {
                 b'L' => "Safari Motor Coaches",
                 b'3' => "Subaru Of America, Inc",
+                b'2' => "Isuzu Motors Limited, Japan",
+                b'6' => "Isuzu Manufacturing Services Of America, Inc.",
+                b'4' => "Subaru Of America, Inc",
+                b'1' => "Isuzu Motors Limited, Japan",
                 _ => UNKNOWN,
             },
             b'R' => match wmi.as_bytes()[2] {
@@ -536,6 +793,8 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'T' => match wmi.as_bytes()[2] {
                 b'1' => "Toyota Motor Manufacturing, Kentucky, Inc.",
                 b'4' => "Toyota Motor Manufacturing, Northern Kentucky, Inc.",
+                b'3' => "Toyota Motor Manufacturing, Kentucky, Inc.",
+                b'A' => "Tabc Inc.",
                 _ => UNKNOWN,
             },
             b'H' => match wmi.as_bytes()[2] {
@@ -545,6 +804,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'A' => match wmi.as_bytes()[2] {
                 b'3' => "Mitsubishi Motors North America",
+                b'4' => "Mitsubishi Motors North America",
                 _ => UNKNOWN,
             },
             b'P' => match wmi.as_bytes()[2] {
@@ -556,6 +816,8 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'5' => "General Motors Llc",
                 b'1' => "General Motors Llc",
                 b'2' => "General Motors Llc",
+                b'D' => "General Motors Llc",
+                b'T' => "General Motors Llc",
                 _ => UNKNOWN,
             },
             b'C' => match wmi.as_bytes()[2] {
@@ -565,6 +827,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'E' => match wmi.as_bytes()[2] {
                 b'3' => "Fca Us Llc",
+                b'N' => "Emergency One, Inc",
                 _ => UNKNOWN,
             },
             b'B' => match wmi.as_bytes()[2] {
@@ -580,10 +843,13 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'M' => match wmi.as_bytes()[2] {
                 b'0' => "Vectrix Corporation",
                 b'A' => "Atk America, Inc.",
+                b'2' => "Ford Motor Company",
+                b'4' => "Ford Motor Company",
                 _ => UNKNOWN,
             },
             b'J' => match wmi.as_bytes()[2] {
                 b'W' => "Westinghouse Electric Corporation",
+                b'G' => "Mercedes-Benz Of North America, Inc.",
                 _ => UNKNOWN,
             },
             b'7' => match wmi.as_bytes()[2] {
@@ -592,10 +858,52 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'Z' => match wmi.as_bytes()[2] {
                 b'M' => "Emb Incorporated",
+                b'3' => "American Lafrance, Llc",
                 _ => UNKNOWN,
             },
             b'8' => match wmi.as_bytes()[2] {
                 b'D' => "Stroker Cycles, Inc",
+                b'0' => "Sterling Trucks (Daimler Division)",
+                _ => UNKNOWN,
+            },
+            b'N' => match wmi.as_bytes()[2] {
+                b'T' => "General Motors Llc",
+                b'U' => "General Motors Llc",
+                b'2' => "Ford Motor Company",
+                b'4' => "Ford Motor Company",
+                _ => UNKNOWN,
+            },
+            b'F' => match wmi.as_bytes()[2] {
+                b'2' => "Ford Motor Company",
+                b'3' => "Ford Motor Company",
+                b'4' => "Ford Motor Company",
+                _ => UNKNOWN,
+            },
+            b'5' => match wmi.as_bytes()[2] {
+                b'V' => "Utilimaster Corporation",
+                _ => UNKNOWN,
+            },
+            b'1' => match wmi.as_bytes()[2] {
+                b'S' => "Superior Coaches",
+                _ => UNKNOWN,
+            },
+            b'9' => match wmi.as_bytes()[2] {
+                b'H' => "Sterling Trucks (Daimler Division)",
+                _ => UNKNOWN,
+            },
+            b'V' => match wmi.as_bytes()[2] {
+                b'4' => "Volvo Group North America, Llc",
+                b'J' => "Volvo Group North America, Llc",
+                b'6' => "Volvo Group North America, Llc",
+                b'3' => "Volvo Group North America, Llc",
+                _ => UNKNOWN,
+            },
+            b'L' => match wmi.as_bytes()[2] {
+                b'M' => "Capacity Of Texas",
+                _ => UNKNOWN,
+            },
+            b'K' => match wmi.as_bytes()[2] {
+                b'A' => "Ic Bus, Llc",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -657,6 +965,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'P' => "Nanchang Aircraft Mfg. Co ( Hongdu Machinery Plant)",
                 b'6' => "Guangzhou Panyu Haojian Motorcycle Industry Co., Ltd.",
                 b'5' => "Guangzhou Tianma Group Tianma Motorcycle Co., Ltd.",
+                b'E' => "Byd Auto Industry Company Limited",
                 _ => UNKNOWN,
             },
             b'S' => match wmi.as_bytes()[2] {
@@ -676,6 +985,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'G' => match wmi.as_bytes()[2] {
                 b'X' => "Byd Auto Co., Ltd.",
                 b'0' => "Yongkang Eagle Motor Co.,Ltd",
+                b'A' => "The Second Automobile Works",
                 _ => UNKNOWN,
             },
             b'R' => match wmi.as_bytes()[2] {
@@ -683,6 +993,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'Y' => "Chongqing Guangyu Motorcycle Manufacture Co., Ltd.",
                 b'P' => "Chongqing Rato Power Co., Ltd.",
                 b'4' => "Yadea  Technology Group Co., Ltd.",
+                b'B' => "General Motors Llc",
                 _ => UNKNOWN,
             },
             b'N' => match wmi.as_bytes()[2] {
@@ -694,6 +1005,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'1' => "Suzuki Motor Of America, Inc",
                 b'4' => "Suzuki Motor Of America, Inc",
                 b'F' => "Jiangmen Zhongyu Motor (Group) Co., Ltd.",
+                b'5' => "Sanfu Motor Industry ",
                 _ => UNKNOWN,
             },
             b'5' => match wmi.as_bytes()[2] {
@@ -751,6 +1063,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'6' => "Hongdou Group Chituma Motorcycle Company",
                 b'8' => "Guangzhou Huaye Electric Vehicle Technology Co., Ltd.",
                 b'H' => "Zhejiang Riya Motorcycle Co., Ltd.",
+                b'S' => "Sanfu Motor Industry ",
                 _ => UNKNOWN,
             },
             b'X' => match wmi.as_bytes()[2] {
@@ -810,6 +1123,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'D' => "Taizhou City Senlong Motorcycle Manufacture Co.,Ltd.",
                 b'E' => "Chongqing Kaier Motorcycle Manufacturing Co.,",
                 b'4' => "Chongqing Yingang Science & Technology (Group) Co., Ltd.",
+                b'V' => "Daqing Volvo Car Manufacturing Co Ltd",
                 _ => UNKNOWN,
             },
             b'J' => match wmi.as_bytes()[2] {
@@ -849,6 +1163,9 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'T' => "Ukeycheyma",
                 b'S' => "Ukeycheyma",
                 b'6' => "Buell Motorcycle Co.",
+                b'W' => "Ukeycheyma",
+                b'U' => "Ukeycheyma",
+                b'V' => "Ukeycheyma",
                 _ => UNKNOWN,
             },
             b'B' => match wmi.as_bytes()[2] {
@@ -862,11 +1179,16 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'F' => match wmi.as_bytes()[2] {
                 b'Y' => "New Flyer Industries Canada Ulc",
                 b'5' => "Esarati Electric Technologies Corp.",
+                b'N' => "American Honda Motor Co., Inc.",
+                b'R' => "American Honda Motor Co., Inc.",
+                b'P' => "American Honda Motor Co., Inc.",
+                b'S' => "American Honda Motor Co., Inc.",
                 _ => UNKNOWN,
             },
             b'U' => match wmi.as_bytes()[2] {
                 b'M' => "Bmw Ag",
                 b'V' => "Titan Imports Inc. Dba Us Titan Inc.",
+                b'X' => "Bmw Manufacturer Corporation / Bmw North America",
                 _ => UNKNOWN,
             },
             b'8' => match wmi.as_bytes()[2] {
@@ -876,6 +1198,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'7' => "Lit Motors Corporation",
                 b'D' => "Mahindra Tractor Assembly Inc",
                 b'N' => "Shockwave Motors, Inc.",
+                b'W' => "Rainier Truck And Chassis Llc",
                 _ => UNKNOWN,
             },
             b'Y' => match wmi.as_bytes()[2] {
@@ -889,6 +1212,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'W' => "Knievel Motorcycle Manufacturing Inc.",
                 b'P' => "Trifun, Inc.",
                 b'S' => "St Certification Service (Usa) Co., Ltd.",
+                b'M' => "Bmw Manufacturer Corporation / Bmw North America",
                 _ => UNKNOWN,
             },
             b'3' => match wmi.as_bytes()[2] {
@@ -896,11 +1220,13 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'J' => "Avera Motors",
                 b'G' => "Coda Automotive, Inc.",
                 b'8' => "Zero Motorcycles, Inc.",
+                b'7' => "Azure Dynamics",
                 _ => UNKNOWN,
             },
             b'C' => match wmi.as_bytes()[2] {
                 b'X' => "Shelby American, Inc.",
                 b'D' => "Indian Motorcycle Company",
+                b'K' => "Western Star Trucks Inc",
                 _ => UNKNOWN,
             },
             b'5' => match wmi.as_bytes()[2] {
@@ -921,16 +1247,27 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'W' => "Alpha Products International, Inc.",
                 b'R' => "Luyuan Inc.",
                 b'S' => "Street Steel Motorsports, Llc",
+                b'Y' => "Kia Georgia, Inc",
                 _ => UNKNOWN,
             },
             b'N' => match wmi.as_bytes()[2] {
                 b'P' => "Hyundai-Kia America Technical Center Inc (Hatci)",
+                b'M' => "Hyundai Motor Manufacturing Alabama Llc (Hmma)",
+                b'1' => "Nissan North America, Inc.",
+                b'T' => "Hyundai Motor Manufacturing Alabama Llc (Hmma)",
                 _ => UNKNOWN,
             },
             b'G' => match wmi.as_bytes()[2] {
                 b'D' => "General Motors Llc",
                 b'8' => "General Motors Llc",
                 b'2' => "General Motors Llc",
+                b'A' => "General Motors Llc",
+                b'3' => "General Motors Llc",
+                b'R' => "General Motors Llc",
+                b'T' => "General Motors Llc",
+                b'Z' => "General Motors Llc",
+                b'5' => "General Motors Llc",
+                b'N' => "General Motors Llc",
                 _ => UNKNOWN,
             },
             b'6' => match wmi.as_bytes()[2] {
@@ -946,6 +1283,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'0' => "Bakkura Mobility Inc.",
                 b'G' => "California Scooter Company, Llc",
                 b'E' => "Amp Motor Vehicles, Inc.",
+                b'3' => "The Vehicle Production Group Llc",
                 _ => UNKNOWN,
             },
             b'K' => match wmi.as_bytes()[2] {
@@ -953,6 +1291,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'C' => "American Honda Motor Co., Inc.",
                 b'M' => "Vento North America, Llc",
                 b'0' => "The Electric Cycle Company",
+                b'J' => "Daimler Trucks North America Llc",
                 _ => UNKNOWN,
             },
             b'A' => match wmi.as_bytes()[2] {
@@ -970,29 +1309,38 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'Z' => "Xtreme Green Products, Inc.",
                 b'K' => "American Performance Technologies, Llc",
                 b'R' => "Motoadvent, Inc.",
+                b'6' => "Suzuki Motor Of America, Inc",
+                b'U' => "Greenkraft Inc.",
                 _ => UNKNOWN,
             },
             b'R' => match wmi.as_bytes()[2] {
                 b'4' => "Xkeleton Motorcycle",
                 b'D' => "Hitong Motors Corp.",
                 b'Y' => "Roketa",
+                b'J' => "Android Industries - Springfield Llc",
+                b'6' => "Azure Dynamics Inc.",
                 _ => UNKNOWN,
             },
             b'1' => match wmi.as_bytes()[2] {
                 b'R' => "Brammo, Inc.",
                 b'D' => "Eco Motor Company, Inc.",
                 b'1' => "Mizer Motor Works, Inc.",
+                b'6' => "Autocar Industries, Llc",
                 _ => UNKNOWN,
             },
             b'E' => match wmi.as_bytes()[2] {
                 b'U' => "Astur N.C. Tooling, Inc",
                 b'H' => "Excelsior-Henderson Motorcycles",
                 b'8' => "Focus  Inc ",
+                b'S' => "Hunter Automotive Group, Inc.",
                 _ => UNKNOWN,
             },
             b'L' => match wmi.as_bytes()[2] {
                 b'5' => "American Ironhorse Motorcycle Company, Inc.",
                 b'Y' => "Johnny Pag",
+                b'M' => "Ford Motor Company",
+                b'1' => "Ford Motor Company",
+                b'T' => "Ford Motor Company",
                 _ => UNKNOWN,
             },
             b'P' => match wmi.as_bytes()[2] {
@@ -1004,12 +1352,21 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'J' => match wmi.as_bytes()[2] {
                 b'1' => "Big Dog Motorcycles",
                 b'E' => "Fast Trac Manufacturing Inc",
+                b'6' => "American Honda Motor Co., Inc.",
+                b'8' => "American Honda Motor Co., Inc.",
+                b'7' => "American Honda Motor Co., Inc.",
+                b'0' => "American Honda Motor Co., Inc.",
                 _ => UNKNOWN,
             },
             b'T' => match wmi.as_bytes()[2] {
                 b'C' => "Cruisers Manufacturing, Inc.",
                 b'Y' => "Thoroughbred Motorsports Inc.",
                 b'M' => "Titan Motorcycle Company Of America",
+                b'D' => "Toyota Motor Manufacturing, Indiana, Inc.",
+                b'E' => "Toyota Motor Manufacturing, California, Inc.",
+                b'B' => "Toyota Motor Manufacturing, Indiana, Inc.",
+                b'F' => "Toyota Motor Manufacturing, Texas, Inc.",
+                b'4' => "Workhorse Custom Chassis",
                 _ => UNKNOWN,
             },
             b'7' => match wmi.as_bytes()[2] {
@@ -1022,15 +1379,22 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'X' => "Millennium Cycles, Inc. ",
                 b'0' => "Nst Inc.",
                 b'R' => "Kuryente Enterprises, Llc",
+                b'4' => "Autocar Llc",
                 _ => UNKNOWN,
             },
             b'9' => match wmi.as_bytes()[2] {
                 b'U' => "Spira4U Llc",
+                b'R' => "Workhorse Group Inc.",
                 _ => UNKNOWN,
             },
             b'S' => match wmi.as_bytes()[2] {
                 b'A' => "Suzuki Motor Of America, Inc",
                 b'J' => "Avanti Motorcycles Inc.",
+                b'3' => "General Motors Llc",
+                _ => UNKNOWN,
+            },
+            b'D' => match wmi.as_bytes()[2] {
+                b'G' => "Terex Advance Mixer",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -1083,34 +1447,60 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'5' => "Chrysler De Mexico Toluca",
                 b'3' => "Chrysler De Mexico Toluca",
                 b'G' => "Ktmmex Sa. De Cv.",
+                b'Z' => "Honda De Mexico",
+                b'4' => "Chrysler De Mexico Toluca",
+                b'A' => "Chrysler De Mexico Toluca",
+                b'8' => "Chrysler De Mexico Toluca",
+                b'6' => "Chrysler De Mexico Toluca",
                 _ => UNKNOWN,
             },
             b'B' => match wmi.as_bytes()[2] {
                 b'M' => "Motor Coach Industries, Inc.",
                 b'5' => "Chrysler De Mexico Toluca",
+                b'4' => "Chrysler De Mexico Toluca",
+                b'8' => "Chrysler De Mexico Toluca",
+                b'7' => "Chrysler De Mexico Toluca",
+                b'H' => "Daimler Trucks North America Llc",
                 _ => UNKNOWN,
             },
             b'J' => match wmi.as_bytes()[2] {
                 b'5' => "Chrysler De Mexico Toluca",
                 b'B' => "Bombardier Recreational Products Inc ",
+                b'4' => "Chrysler De Mexico Toluca",
                 _ => UNKNOWN,
             },
             b'P' => match wmi.as_bytes()[2] {
                 b'5' => "Chrysler De Mexico Toluca",
                 b'3' => "Chrysler De Mexico Toluca",
+                b'4' => "Chrysler De Mexico Toluca",
+                b'C' => "Nissan North America, Inc.",
+                b'7' => "Chrysler De Mexico Toluca",
                 _ => UNKNOWN,
             },
             b'D' => match wmi.as_bytes()[2] {
                 b'5' => "Chrysler De Mexico Toluca",
+                b'4' => "Chrysler De Mexico Toluca",
+                b'8' => "Chrysler De Mexico Toluca",
+                b'7' => "Chrysler De Mexico Toluca",
+                b'3' => "Chrysler De Mexico Toluca",
                 _ => UNKNOWN,
             },
             b'A' => match wmi.as_bytes()[2] {
                 b'B' => "Dina Autobuses",
+                b'4' => "Chrysler De Mexico Toluca",
+                b'8' => "Chrysler De Mexico Toluca",
+                b'3' => "Chrysler De Mexico Toluca",
+                b'7' => "Chrysler De Mexico Toluca",
+                b'K' => "Daimler Trucks North America Llc",
                 _ => UNKNOWN,
             },
             b'F' => match wmi.as_bytes()[2] {
                 b'B' => "Ford Motor Company, Mexico",
                 b'A' => "Ford Motor Company, Mexico",
+                b'M' => "Ford Motor Company, Mexico",
+                b'N' => "Blue Diamond Truck, S. De R. L. De C. V.",
+                b'T' => "Ford Motor Company, Mexico",
+                b'6' => "Daimler Chrysler De Mexico Sa De Cv",
                 _ => UNKNOWN,
             },
             b'M' => match wmi.as_bytes()[2] {
@@ -1121,6 +1511,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'Z' => "Mazda Motor Manufacturing De Mexico S.A. De C.V.",
                 b'Y' => "Mazda Motor Manufacturing De Mexico S.A. De C.V.",
                 b'D' => "Mazda Motor Manufacturing De Mexico S.A. De C.V.",
+                b'V' => "Mazda Motor Manufacturing De Mexico S.A. De C.V.",
                 _ => UNKNOWN,
             },
             b'G' => match wmi.as_bytes()[2] {
@@ -1128,6 +1519,17 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'4' => "General Motors Llc",
                 b'3' => "General Motors Llc",
                 b'1' => "General Motors Llc",
+                b'S' => "General Motors Llc",
+                b'7' => "General Motors Llc",
+                b'K' => "General Motors Llc",
+                b'M' => "General Motors Llc",
+                b'5' => "General Motors Llc",
+                b'0' => "General Motors Llc",
+                b'Y' => "General Motors Llc",
+                b'N' => "General Motors Llc",
+                b'C' => "General Motors Llc",
+                b'T' => "General Motors Llc",
+                b'G' => "General Motors Llc",
                 _ => UNKNOWN,
             },
             b'E' => match wmi.as_bytes()[2] {
@@ -1140,21 +1542,47 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'V' => match wmi.as_bytes()[2] {
                 b'W' => "Volkswagen De Mexico Sa De Cv",
+                b'V' => "Volkswagen De Mexico Sa De Cv",
                 _ => UNKNOWN,
             },
             b'N' => match wmi.as_bytes()[2] {
                 b'1' => "Nissan Mexicana, S.A. De C.V.",
                 b'E' => "Polaris Industries Inc.",
                 b'S' => "Polaris Industries Inc.",
+                b'8' => "Nissan Mexicana, S.A. De C.V.",
+                b'6' => "Nissan Mexicana, S.A. De C.V.",
                 _ => UNKNOWN,
             },
             b'K' => match wmi.as_bytes()[2] {
                 b'P' => "Kia  Mexico S.A. De C.V.",
+                b'M' => "Kia  Mexico S.A. De C.V.",
                 _ => UNKNOWN,
             },
             b'H' => match wmi.as_bytes()[2] {
                 b'G' => "Honda De Mexico",
                 b'1' => "Honda De Mexico",
+                b'C' => "Blue Diamond Truck, S. De R. L. De C. V.",
+                b'R' => "Navistar, Inc.",
+                b'S' => "Navistar, Inc.",
+                _ => UNKNOWN,
+            },
+            b'X' => match wmi.as_bytes()[2] {
+                b'K' => "Kenworth Mexicana Sa De Cv",
+                _ => UNKNOWN,
+            },
+            b'W' => match wmi.as_bytes()[2] {
+                b'M' => "Kenworth Mexicana Sa De Cv",
+                b'K' => "Kenworth Truck Company",
+                b'P' => "Peterbilt Motors Company",
+                _ => UNKNOWN,
+            },
+            b'T' => match wmi.as_bytes()[2] {
+                b'M' => "Toyota Motor Mfg De Baja California S De Rl De Cv",
+                b'Y' => "Toyota Motor Manufacturing De Guanajuato",
+                _ => UNKNOWN,
+            },
+            b'S' => match wmi.as_bytes()[2] {
+                b'D' => "Sterling Trucks (Daimler Division)",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -1167,6 +1595,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'M' => match wmi.as_bytes()[2] {
                 b'T' => "Toyota Motor Manufacturing,Turkey ,Inc.",
+                b'0' => "Ford Otomotiv Sanayi A.S., Turkey",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -1174,6 +1603,8 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
         b'8' => match wmi.as_bytes()[1] {
             b'B' => match wmi.as_bytes()[2] {
                 b'R' => "Mercedes-Benz Usa, Llc (Sprinter)",
+                b'T' => "Mercedes-Benz Usa, Llc (Sprinter)",
+                b'U' => "Mercedes-Benz Usa, Llc (Sprinter)",
                 _ => UNKNOWN,
             },
             b'A' => match wmi.as_bytes()[2] {
@@ -1186,6 +1617,8 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'3' => match wmi.as_bytes()[2] {
                 b'V' => "International Truck And Engine Corporation",
                 b'2' => "Harley-Davidson Do Brasil Ltda",
+                b'M' => "International Truck And Engine Corporation",
+                b'S' => "International Truck And Engine Corporation",
                 _ => UNKNOWN,
             },
             b'4' => match wmi.as_bytes()[2] {
@@ -1194,6 +1627,8 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'B' => match wmi.as_bytes()[2] {
                 b'W' => "Volkswagen Group Of America, Inc.",
+                b'V' => "Volvo Do Brasil Veiculos Ltda",
+                b'F' => "Ford Motor Company Brasil Ltda.",
                 _ => UNKNOWN,
             },
             b'7' => match wmi.as_bytes()[2] {
@@ -1213,17 +1648,23 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'A' => "Deceleste Sa",
                 _ => UNKNOWN,
             },
+            b'D' => match wmi.as_bytes()[2] {
+                b'B' => "Mercedes-Benz Truck Company Inc",
+                _ => UNKNOWN,
+            },
             _ => UNKNOWN,
         },
         b'Y' => match wmi.as_bytes()[1] {
             b'V' => match wmi.as_bytes()[2] {
                 b'3' => "Volvo Car Corporation",
                 b'1' => "Volvo Car Corporation",
+                b'4' => "Volvo Car Corporation",
                 _ => UNKNOWN,
             },
             b'S' => match wmi.as_bytes()[2] {
                 b'3' => "Saab Cars North America, Inc.",
                 b'M' => "Polestar Performance Ab",
+                b'R' => "Polestar Performance Ab",
                 _ => UNKNOWN,
             },
             b'K' => match wmi.as_bytes()[2] {
@@ -1278,15 +1719,25 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'Y' => "Daelim Motor Co., Ltd",
                 b'4' => "Kr Motors Co., Ltd",
                 b'1' => "Hyosung Motors & Machinery Inc",
+                b'8' => "Hyundai Motor Co",
+                b'U' => "Hyundai Motor Co",
+                b'F' => "Hyundai Motor Co",
                 _ => UNKNOWN,
             },
             b'P' => match wmi.as_bytes()[2] {
                 b'H' => "Hyundai Motor Co",
+                b'S' => "Ssangyong Motor Co. Ltd",
                 _ => UNKNOWN,
             },
             b'N' => match wmi.as_bytes()[2] {
                 b'A' => "Kia Corporation",
                 b'J' => "Kia Motors (Ford Imports)",
+                b'M' => "Renault Samsung Motors Co., Ltd",
+                b'D' => "Kia Corporation",
+                _ => UNKNOWN,
+            },
+            b'F' => match wmi.as_bytes()[2] {
+                b'B' => "Freightliner  Corporation",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -1296,6 +1747,8 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'M' => "Maserati S.P.A.",
                 b'R' => "Alfa Romeo S.P.A.",
                 b'P' => "Piaggio & C.S.P.A.",
+                b'C' => "Fca Italy S.P.A.",
+                b'S' => "Alfa Romeo S.P.A.",
                 _ => UNKNOWN,
             },
             b'C' => match wmi.as_bytes()[2] {
@@ -1308,6 +1761,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'R' => "Pininfarina",
                 b'A' => "Fca Italy S.P.A.",
                 b'F' => "Ferrari S.P.A.",
+                b'B' => "Fca Italy S.P.A.",
                 _ => UNKNOWN,
             },
             b'H' => match wmi.as_bytes()[2] {
@@ -1330,6 +1784,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             b'N' => match wmi.as_bytes()[2] {
                 b'N' => "Energica Motor Company Spa",
                 b'0' => "Swm Motorcycles S.R.L.",
+                b'6' => "Maserati S.P.A.",
                 _ => UNKNOWN,
             },
             b'J' => match wmi.as_bytes()[2] {
@@ -1355,6 +1810,14 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'1' => "Tomos D.O.O. Motoindustrija",
                 _ => UNKNOWN,
             },
+            b'P' => match wmi.as_bytes()[2] {
+                b'B' => "Automobili Lamborghini Spa",
+                _ => UNKNOWN,
+            },
+            b'S' => match wmi.as_bytes()[2] {
+                b'G' => "Ferrari S.P.A.",
+                _ => UNKNOWN,
+            },
             _ => UNKNOWN,
         },
         b'X' => match wmi.as_bytes()[1] {
@@ -1368,6 +1831,10 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'8' => match wmi.as_bytes()[2] {
                 b'J' => "Irbitski Mototsicletny Zavod",
+                _ => UNKNOWN,
+            },
+            b'L' => match wmi.as_bytes()[2] {
+                b'W' => "Terberg Benschop B.V.",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -1422,6 +1889,15 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'F' => "Royal Enfield, A Unit Of Eicher Motors Ltd.",
                 _ => UNKNOWN,
             },
+            b'C' => match wmi.as_bytes()[2] {
+                b'V' => "Mahindra & Mahindra Limited",
+                b'U' => "Mahindra & Mahindra Limited",
+                _ => UNKNOWN,
+            },
+            b'A' => match wmi.as_bytes()[2] {
+                b'J' => "Ford India Ltd",
+                _ => UNKNOWN,
+            },
             _ => UNKNOWN,
         },
         b'T' => match wmi.as_bytes()[1] {
@@ -1448,6 +1924,10 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'C' => match wmi.as_bytes()[2] {
                 b'P' => "Peraves Ag",
+                _ => UNKNOWN,
+            },
+            b'Y' => match wmi.as_bytes()[2] {
+                b'B' => "Mitsubishi Fuso Truck Europe S.A.",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -1486,6 +1966,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'H' => "Honda Vietnam Co., Ltd.",
                 b'7' => "Gelimex",
                 b'P' => "Vietnam Kwang Yang Motor Co., Ltd.",
+                b'L' => "Vinfast Trading And Production Limited Liability Company",
                 _ => UNKNOWN,
             },
             b'2' => match wmi.as_bytes()[2] {
@@ -1534,6 +2015,7 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
                 b'5' => "Anchi Motorcycle Technology Limited",
                 b'N' => "Dayi Intelligent Technology Co. Limited",
                 b'4' => "Mking Technology (Hongkong) Co., Limited",
+                b'E' => "Cnreally Known Corporation Limited",
                 _ => UNKNOWN,
             },
             b'8' => match wmi.as_bytes()[2] {
@@ -1544,6 +2026,10 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'6' => match wmi.as_bytes()[2] {
                 b'J' => "Newbot (Hk) Co., Limited",
+                _ => UNKNOWN,
+            },
+            b'S' => match wmi.as_bytes()[2] {
+                b'B' => "Freightliner  Corporation",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
@@ -1568,6 +2054,14 @@ pub const fn map_wmi_to_manufacturer(wmi: &str) -> &'static str {
             },
             b'8' => match wmi.as_bytes()[2] {
                 b'M' => "Massimo Motor Sports, Llc",
+                _ => UNKNOWN,
+            },
+            b'D' => match wmi.as_bytes()[2] {
+                b'M' => "General Motors Llc",
+                _ => UNKNOWN,
+            },
+            b'F' => match wmi.as_bytes()[2] {
+                b'V' => "Freightliner  Corporation",
                 _ => UNKNOWN,
             },
             _ => UNKNOWN,
