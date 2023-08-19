@@ -1,0 +1,15 @@
+[package]
+name = "vin-info"
+version = "0.1.0"
+edition = "2021"
+description = "VIN (Vehicle identifier number) parser"
+readme = "README.md"
+repository = "https://github.com/DoumanAsh/vin-info"
+license = "BSL-1.0"
+keywords = ["vin"]
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE",
+]
