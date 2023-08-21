@@ -119,16 +119,29 @@ impl<'a> Vin<'a> {
         self.0.as_bytes()[8] as char == expected
     }
 
+    const fn slice(&self, start: usize, len: usize) -> &str {
+        unsafe {
+            str::from_utf8_unchecked(
+                slice::from_raw_parts(self.0.as_ptr().add(start), len)
+            )
+        }
+    }
+
     #[inline(always)]
     ///Returns 3 letter World manufacturer identifier
     ///
     ///For some WMI may always ending with digit 9 (Check wikipedia for details)
     pub const fn wmi(&self) -> &str {
-        unsafe {
-            str::from_utf8_unchecked(
-                slice::from_raw_parts(self.0.as_ptr(), 3)
-            )
-        }
+        self.slice(0, 3)
+    }
+
+    #[inline(always)]
+    ///Returns vehicle description section
+    ///
+    ///Per ISO3779 it is characters from 4 to 9.
+    ///But for North America/Asia character 9 usually acts as check digit.
+    pub const fn vds(&self) -> &str {
+        self.slice(3, 6)
     }
 
     #[inline(always)]
@@ -139,11 +152,7 @@ impl<'a> Vin<'a> {
     ///
     ///For Europe you can consider whole VIC as serial number.
     pub const fn vic(&self) -> &str {
-        unsafe {
-            str::from_utf8_unchecked(
-                slice::from_raw_parts(self.0.as_ptr().add(9), 8)
-            )
-        }
+        self.slice(9, 8)
     }
 
     #[inline(always)]
